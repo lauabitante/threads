@@ -1,22 +1,20 @@
 package threads;
 
-import java.util.Scanner;
-
 public class Main {
 
-	public static void main(String[] args) {
+	
+	static Buffer buffer = new Buffer();
+	static ThreadInput input;
+	
+	public static void main(String[] args) {   	
+      
+		input = new ThreadInput(buffer);
 		
-	    Scanner scan = new Scanner(System.in);
-    	int  sensor;
-    	int  valor;
-    	
-        System.out.print("Sensor: ");
-        sensor = scan.nextInt();
-        System.out.print("Valor: ");
-        valor = scan.nextInt();
-        
-        new Dashboard().updateSensor(sensor, valor);
-
+		input.run();
+		
+        if (buffer.hasUpdate()) {
+        	Update u = buffer.getUpdate();
+        	new Dashboard().updateSensor(u.getSensor(), u.getValue());
+        }
 	}
-
 }

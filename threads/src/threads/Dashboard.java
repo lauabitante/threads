@@ -14,8 +14,6 @@ public class Dashboard extends JFrame {
 		super("Dashboard");
 		setBounds(300, 200, 200, 180);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		 
-		
 		setupDashboard();
 	    Dashboard.this.setVisible(true);
 	}
@@ -32,7 +30,7 @@ public class Dashboard extends JFrame {
         }
     }
 
-    public void updateSensor(int sensor, int valor) {
-    	txtSensor[sensor-1].setText(String.valueOf(valor));
+    public void updateSensor(int sensor, int value) {
+    	txtSensor[sensor-1].setText(String.valueOf(value));
     }
 }

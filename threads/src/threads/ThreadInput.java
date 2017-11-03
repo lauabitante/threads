@@ -29,6 +29,10 @@ public class ThreadInput implements Runnable {
 			if (option == 1) {
 				System.out.print("Sensor: ");
 				sensor = scan.nextInt();
+				if (sensor < 1 || sensor > 6) {
+					System.out.println("Sensor inválido.");
+					continue;
+				}
 		        System.out.print("Valor: ");
 		        value = scan.nextInt();
 		        

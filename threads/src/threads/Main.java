@@ -1,7 +1,6 @@
 package threads;
 
 public class Main {
-
 	
 	static Buffer buffer = new Buffer();
 	static ThreadInput input;

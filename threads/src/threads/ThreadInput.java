@@ -2,7 +2,7 @@ package threads;
 
 import java.util.Scanner;
 
-public class ThreadInput extends Thread {
+public class ThreadInput implements Runnable {
 
 	Scanner scan = new Scanner(System.in);
 	Buffer buffer;
